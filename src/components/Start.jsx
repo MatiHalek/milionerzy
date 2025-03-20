@@ -70,7 +70,7 @@ const Start = (props) => {
           src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/Who-Wants-To-Be-A-Millionaire-Game-2020-Logo.png"
           className="app--logo"
         />
-        <h1>Wybierz kategorie</h1>
+        <h1>Wybierz kategorię</h1>
         <select onChange={handleChanged} className="game--start--select">
           <option value="programista">Technik Programista</option>
           <option value="it">Technik Informatyk</option>
