@@ -67,29 +67,29 @@ const Start = (props) => {
     <div className="game--start--box">
       <div className="game--start--wrapper">
         <img
-          src="https://mlpnk72yciwc.i.optimole.com/cqhiHLc.IIZS~2ef73/w:auto/h:auto/q:75/https://bleedingcool.com/wp-content/uploads/2020/10/Who-Wants-To-Be-A-Millionaire-Game-2020-Logo.png"
+          src="src\assets\Who-Wants-To-Be-A-Millionaire-Game-2020-Logo.png" alt="App logo"
           className="app--logo"
         />
-        <h1>Wybierz kategorię</h1>
+        <h1>Select category</h1>
         <select onChange={handleChanged} className="game--start--select">
-          <option value="programista">Technik Programista</option>
-          <option value="it">Technik Informatyk</option>
-          <option value="mechatronik">Technik Mechatronik</option>
-          <option value="mechanik">Technik Mechanik</option>
-          <option value="elektryk">Technik Elektryk</option>
-          <option value="reklama">Technik Reklamy</option>
-          <option value="samochodowka">Technik Pojazdów Samochodowych</option>
-          <option value="architektura">Technik Architektury Krajobrazu</option>
+          <option value="programista">Technik programista</option>
+          <option value="it">Technik informatyk</option>
+          <option value="mechatronik">Technik mechatronik</option>
+          <option value="mechanik">Technik mechanik</option>
+          <option value="elektryk">Technik elektryk</option>
+          <option value="reklama">Technik reklamy</option>
+          <option value="samochodowka">Technik pojazdów samochodowych</option>
+          <option value="architektura">Technik architektury krajobrazu</option>
         </select>
         <button
           className="game--start--button"
           onClick={() => {
             setGameStart(true);
           }}
-        >
-          Zacznij grę
+        >Start the game!
         </button>
       </div>
+      <p className="copyright">&copy; 2024-2025 Created by MagisterLysaGlowa | Remastered by Vistaaa. All rights reserved.</p>
     </div>
   );
 };

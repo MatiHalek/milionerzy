@@ -24,6 +24,7 @@
 .game--end--header {
   color: white;
   font-size: 3rem;
+  text-align: center;
 }
 
 .game--end--button,
@@ -34,11 +35,16 @@
   text-align: center;
   background: linear-gradient(#0e0124, #22074d);
   border: 1px solid white;
-  border-radius: 15px;
-  font-weight: 300;
+  border-radius: 1rem;
+  font-weight: bolder;
+  letter-spacing: .5px;
   font-size: 20px;
   cursor: pointer;
   color: white;
+  &:hover
+  {
+    background: mediumblue;
+  }
 }
 
 .game--start--select {
@@ -62,6 +68,7 @@
   background-color: #020230;
   color: white;
   font-size: 30px;
+  position: relative;
 }
 
 .game--start--wrapper {
@@ -73,7 +80,8 @@
 .main {
   width: 75%;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
-    url("https://i.ytimg.com/vi/yQbJRGs0fy8/maxresdefault.jpg") center;
+    url("src/assets/maxresdefault.jpg") center no-repeat;
+    background-size: cover;
   display: flex;
   flex-direction: column;
 }
@@ -84,6 +92,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 
 .moneyList {
@@ -96,16 +105,17 @@
   display: flex;
   align-items: center;
   padding: 10px 5px 10px 5px;
-  border-radius: 5px;
-  border-top: 1px dashed rgba(128, 128, 128, 0.226);
+  
+  border-top: 1px dashed whitesmoke;
 }
 
 .moneyListItem:last-child {
-  border-bottom: 1px dashed rgba(128, 128, 128, 0.226);
+  border-bottom: 1px dashed whitesmoke;
 }
 
 .moneyListItem.active {
-  background-color: teal;
+  background: radial-gradient(rgba(204, 109, 0, 0.9), rgba(199, 142, 78, 0.7));
+  border-radius: .5rem;
 }
 
 .moneyListItemNumber {
@@ -116,19 +126,17 @@
 
 .moneyListItemAmount {
   font-size: 25px;
-  font-weight: 300;
+  font-weight: bolder;
+  letter-spacing: .5px;
 }
 
 .top {
-  height: 50%;
+  height: 55%;
+  max-height: calc(100% - 250px);
   position: relative;
   display: flex;
   justify-content: center;
   padding: 2em;
-}
-
-.bottom {
-  height: 50%;
 }
 
 .trivia {
@@ -136,17 +144,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 }
 
 .question {
   width: 80%;
-  background: linear-gradient(#100241, black);
+  background: linear-gradient(rgb(16, 2, 65, 0.5), rgb(0, 0, 0, 0.5));
+  backdrop-filter: blur(1rem);
   text-align: center;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 1rem;
   border: 2px solid white;
-  font-size: 20px;
+  font-size: 1.5rem;
+  letter-spacing: .5px;
+  font-weight: bolder;
 }
 
 .answers {
@@ -154,6 +164,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 .answer {
@@ -163,26 +174,44 @@
   text-align: center;
   background: linear-gradient(#0e0124, #22074d);
   border: 1px solid white;
-  border-radius: 15px;
+  border-radius: 1rem;
   font-weight: 300;
   font-size: 20px;
   cursor: pointer;
+  user-select: none;
 }
 
 .answer:hover,
 .answer.active {
-  background: mediumblue;
+  background:darkblue;
 }
 
 .answer.correct {
   animation: correct 3s ease forwards;
 }
 
+.highlighted-text
+{
+  color: rgb(204, 109, 0);
+}
+
+.bold-text
+{
+  font-weight: bold;
+}
+
+.copyright
+{
+  position: absolute;
+  bottom: .5rem;
+  font-size: 1rem;
+}
+
 @keyframes correct {
   0%,
   22%,
   42% {
-    background: mediumblue;
+    background: darkblue;
   }
   20%,
   40%,
@@ -203,7 +232,7 @@
   0%,
   22%,
   42% {
-    background: mediumblue;
+    background: darkblue;
   }
   20%,
   40%,

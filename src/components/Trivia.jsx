@@ -40,19 +40,21 @@ const Trivia = (props) => {
     <div className="trivia">
       <div className="question">{question?.question}</div>
       <div className="answers">
-        {question?.answers.map((a) => (
+        {question?.answers.map((a, index) => (
           <div
+            key={index}
             className={"answer"}
             onClick={(e) => {
               handleClick(e, a);
             }}
           >
-            {a.text}
+            <span className="bold-text highlighted-text">{String.fromCharCode(65 + index)}. </span>{a.text}
           </div>
         ))}
       </div>
     </div>
   );
+  
 };
 
 export default Trivia;
