@@ -78,7 +78,7 @@ export const programmer = [
         correct: false,
       },
       {
-        text: "Keyboard and mouse",
+        text: "Code editor",
         correct: true,
       },
       {
@@ -86,7 +86,7 @@ export const programmer = [
         correct: false,
       },
       {
-        text: "Code editor",
+        text: "Printer",
         correct: false,
       },
     ],
