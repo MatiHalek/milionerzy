@@ -16,7 +16,6 @@ function App() {
     setQuestionImage("");
     if (data != null && questionNumber < 15) {
       setQuestionImage(data[questionNumber - 1].image);
-      console.log("changed");
     }
   }, [questionNumber, data]);
 
@@ -64,7 +63,7 @@ function App() {
             <div className="pyramid">
               <ul className="moneyList">
                 {moneyPyramid.map((m) => (
-                  <li
+                  <li key={m.id}
                     className={
                       questionNumber === m.id
                         ? "moneyListItem active"
